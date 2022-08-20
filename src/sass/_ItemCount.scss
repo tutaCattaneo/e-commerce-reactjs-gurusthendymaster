@@ -1,0 +1,73 @@
+.productos__row-card-buy-quantity-container{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid $white;
+    padding: 3% 2%;
+    border-radius: 8px;
+
+    &-stock{
+        font-size: 1rem;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.55);
+    }
+
+    &-title{
+        color: $white;
+    }
+
+    &-apply{
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 3px 10px;
+        color: $white;
+        background-color: transparent;
+        transition: 200ms ease-in-out;
+        font-size: 1rem;
+        border: 1px solid $white;
+        user-select: none;
+        background-color: transparent;
+        margin-right: 10px;
+        border: 1px solid transparent;
+
+        &:hover{
+            border: 1px solid $white;
+            color: $white;
+        }
+    }
+
+    &-selector{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        svg{   
+            color: $white;
+            margin-left: 15px;
+            margin-right: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+        }
+        label{
+            color: $white;
+        }
+        input{
+            width: 50px;
+            text-align: center;
+            outline: none;
+            -webkit-appearance: none;
+            background-color: $white;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button{
+        appearance: none;
+        margin: 0;
+        }
+    }
+}

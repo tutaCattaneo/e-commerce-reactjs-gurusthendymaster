@@ -1,0 +1,502 @@
+.checkout
+{
+    padding: 0 12%;
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+    &-title
+    {
+        font-size: 2.5rem;
+        margin-bottom: 5%;
+    }
+
+    &__contain
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        height: auto;
+
+
+        &-content 
+        {
+            margin: 112px 30px;
+            position: relative;
+            display: flex;
+            background: $white;
+            min-width: 588px;
+            border-radius: 10px;
+            padding: 150px 80px 80px;
+            box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05);
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+            align-content: center;
+
+            
+
+            &-dni
+            {
+                width: 400px;
+                height: 280px;
+                position: absolute;
+                top: -112px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                label 
+                {
+                    font-size: 10px;
+                    letter-spacing: 1px;
+                    text-shadow: none;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    opacity: 0.5;
+                    display: block;
+                    margin-bottom: 3px;
+                }
+
+                &-flip 
+                {
+                    transition: 200ms ease-in-out;
+                    transform-style: preserve-3d;
+                    position: relative;        
+                    
+                    &-front
+                    {
+                        width: 400px;
+                        height: 250px;
+                        border-radius: 15px;
+                        backface-visibility: hidden;
+                        background: linear-gradient(45deg,#bed2e0,#e0f2ff 80%,#eef8ff);
+                        position: absolute;
+                        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05);
+
+                        &-chip 
+                        {
+                            background-image: url(https://http2.mlstatic.com/resources/frontend/buyingflow-frontend-legacy/dist/images/picture-b47309c45d.svg);
+                            position: relative;
+                            background-repeat: no-repeat;
+                            background-size: 5.76923em;
+                            height: 6.15385em;
+                            top: 80px;
+                            left: 40px;
+                        }
+
+                        &-number 
+                        {
+                            position: absolute;
+                            margin: 0 auto;
+                            top: 103px;
+                            left: 11px;
+                            font-size: 38px;
+                        }
+
+                        &-holder
+                        {
+                            position: absolute;
+                            margin: 0 auto;
+                            top: 76px;
+                            left: 160px;
+                            font-size: 22px;
+                            text-transform: capitalize;
+                        }
+
+                        &-expiration
+                        {
+                            text-align: right;
+                            left: 15px;
+                            position: absolute;
+                            margin: 0 auto;
+                            top: 195px;
+                            font-size: 22px;
+                            text-transform: capitalize;
+
+                            div
+                            {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-form 
+            {
+
+                fieldset 
+                {
+                    border: none;
+                    padding: 0;
+                    padding: 10px 0;
+                    position: relative;
+                    clear: both;
+              
+                    &.fieldset-expiration 
+                    {
+                        float: left;
+                        width: 45%;
+                        
+                        & .select 
+                        {
+                            width: 84px;
+                            margin-right: 12px;
+                            float: left;
+                        }
+                    }
+                
+                    &.fieldset-ccv 
+                    {
+                        clear: none;
+                        float: right;
+                        width: 45%;
+                    }
+                
+                    label 
+                    {
+                        display: block;
+                        font-size: 1rem;
+                        margin-bottom: 5px;
+                    }
+                
+                    input, .select 
+                    {
+                        width: 100%;
+                        height: 38px;
+                        font-size: 15px;
+                        border-bottom: 1px solid #ccc;
+                        outline: none;
+                        padding: 10px 5px;
+                
+                        &.input-cart-number 
+                        {
+                            width: 82px;
+                            display: inline-block;
+                            margin-right: 8px;
+                
+                            &:last-child 
+                            {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+              
+                    .select 
+                    {
+                        &::after 
+                        {
+                            content: '';
+                            z-index: 2;
+                            pointer-events: none;
+                        }
+                
+                        select 
+                        {
+                            width: 100%;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+
+            &-form-two
+            {
+
+                fieldset 
+                {
+                    border: none;
+                    padding: 0;
+                    padding: 10px 0;
+                    position: relative;
+                    clear: both;
+                }
+
+                .double-fieldset
+                {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    align-content: center;
+
+                    fieldset
+                    {
+                        margin-left: 15px;
+                        margin-right: 15px;
+                    }
+                }
+
+                label 
+                {
+                    display: block;
+                    font-size: 1rem;
+                    margin-bottom: 5px;
+                }
+
+                input
+                {
+                    width: 100%;
+                    height: 38px;
+                    font-size: 15px;
+                    border-bottom: 1px solid #ccc;
+                    outline: none;
+                    padding: 10px 5px;
+                }
+            }
+
+            &-button
+            {
+                display: flex;
+                margin-top: 60px;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+
+                &-next
+                {
+                    padding: 16px 32px;
+                    background-color: #4aabff;
+                    background-image: linear-gradient(to right, #4aabff 0%, #fc42ff 51%, #4aabff 100%);
+                    background-size: 250% auto;
+                    color: $white;
+                    border-radius: 10px;
+                    max-width: 200px;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: 0.5s ease-in-out;
+
+                    &-error
+                    {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        align-content: center;
+                        flex-direction: row;
+                        padding-top: 15px;
+        
+                        svg
+                        {
+                            color: $red;
+                        }
+        
+                        &-text
+                        {
+                            color: $red;
+                            font-size: 0.9rem;
+                            }
+                        }
+                }
+
+                &-back
+                {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    align-content: center;
+                    cursor: pointer;
+                    float: right;
+                }
+
+                #formError
+                {
+                    display: none;
+                }
+            }
+        }
+
+        &-details
+        {
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            justify-content: center;
+            align-items: center;
+            max-width: 655px;
+            box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05);
+            padding: 6% 2%;
+            border-radius: 10px;
+            background-image: linear-gradient(45deg, rgba(21,162,203,0.8) 15%, rgba(224,42,255,0.8) 100%);
+            color: $white;
+            z-index: 0;
+
+            &-id{
+                margin-top: 30px;
+            }
+
+            &-title
+            {
+                font-size: 2rem;
+                font-weight: 600;
+            }
+
+            &-content
+            {
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #ccc;
+                padding: 25px 20px;
+
+                &-off{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    align-content: center;
+                    width: 100%;
+
+                    &-title{
+                        height: fit-content;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        margin-left: 10px;
+                        background: linear-gradient(-45deg, #dd33c6, #965ada, #2295befb, #17c4e2);
+                        background-size: 450%;
+                        animation: gradient 5s ease infinite;
+                        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05);
+                    }
+
+                    @keyframes gradient {
+                        0% {
+                            background-position: 0% 50%;
+                        }
+                        50% {
+                            background-position: 100% 50%;
+                        }
+                        100% {
+                            background-position: 0% 50%;
+                        }
+                    }
+
+                    div{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: row;
+                        align-content: center;
+                    }
+
+                    &-oldprice{
+                        color: rgba(255, 255, 255, 0.55);
+                        text-decoration: line-through;
+                    }
+                }
+
+                &-img
+                {
+                    width: 100px;
+                    height: 100px;
+                    min-width: 100px;
+                    margin-right: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                &-title
+                {
+                    font-size: 1.5rem;
+                    text-align: center;
+                    margin-right: 30px;
+                    text-align: center;
+                }
+
+                &-quantity
+                {
+                    font-size: 1rem;
+                    margin-right: 30px;
+                    text-align: center;
+                }
+
+                &-subtotal
+                {
+                    font-size: 1rem;
+                    margin-right: 30px;
+                    text-align: center;
+                }
+            }
+
+            &-total
+            {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+
+                &-title
+                {
+                    font-size: 2rem;
+                }
+
+                &-currency
+                {
+                    margin: 20px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    flex-direction: column;
+                }
+
+                .knobs, .layer
+                {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                .button
+                {
+                    position: relative;
+                    top: 50%;
+                    width: 74px;
+                    height: 36px;
+                    overflow: hidden;
+                }
+
+                .button.r, .button.r .layer
+                {
+                    border-radius: 100px;
+                }
+
+                .button.b2
+                {
+                    border-radius: 2px;
+                }
+
+                .checkbox
+                {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0;
+                    margin: 0;
+                    opacity: 0;
+                    cursor: pointer;
+                    z-index: 3;
+                }
+
+                .knobs
+                {
+                    z-index: 2;
+                }
+
+                .layer
+                {
+                    width: 100%;
+                    background-color: #ebf7fc;
+                    transition: 0.3s ease all;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
